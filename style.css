@@ -1,0 +1,244 @@
+/* ===========================
+   General Reset & Body Styling
+   =========================== */
+
+/* Reset box-sizing to border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Base body styling */
+body {
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 40px 25px;
+  background-color: #e7eaee;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ===========================
+   Main Layout Structure
+   =========================== */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Spacing for right and left containers */
+.right-container,
+.left,
+.right {
+  margin-top: 25px;
+}
+
+/* General container styling */
+.all-container {
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+
+/* ===========================
+   Left Container Styling
+   =========================== */
+
+/* Top-left section */
+.main-container .left-container .top-left-container .left {
+  background-color: #7541c8; /* Purple */
+  color: #ffffff;
+}
+
+.main-container .left-container .top-left-container .right {
+  background-color: #48556a; /* Dark blue-gray */
+  color: #ffffff;
+}
+
+/* Bottom-left section */
+.main-container .left-container .bottom-left-container .right {
+  background-color: #19212e; /* Darker blue */
+  color: #ffffff;
+}
+
+/* Styling for left-bottom and right container */
+.main-container .left-container .bottom-left-container .left,
+.right-container {
+  background-color: #ffffff; /* White background */
+  color: #676d7e; /* Dark gray text */
+}
+
+/* ===========================
+   Headings
+   =========================== */
+
+/* General heading styling */
+.main-container h2 {
+  font-weight: 500;
+}
+
+/* Custom heading colors for different sections */
+.main-container .left-container .top-left-container .right h2,
+.main-container .left-container .bottom-left-container .right h2 {
+  color: #edfffd; /* Light cyan */
+}
+
+.main-container .left-container .bottom-left-container .right h2 {
+  color: #f8fadc; /* Pale yellow */
+}
+
+.main-container .left-container .bottom-left-container .left h2,
+.main-container .right-container h2 {
+  color: #8c1c1c; /* Dark red */
+}
+
+/* ===========================
+   Status Text
+   =========================== */
+
+.status {
+  font-size: 11px;
+}
+
+/* Adjust opacity for better readability */
+.main-container .left-container .top-left-container .left .status,
+.main-container .left-container .top-left-container .right .status,
+.main-container .left-container .bottom-left-container .right .status {
+  opacity: 0.9;
+}
+
+/* Custom status text color */
+.main-container .left-container .bottom-left-container .left .status,
+.main-container .right-container .status {
+  color: #917676; /* Soft brown */
+}
+
+/* ===========================
+   Paragraph Styling
+   =========================== */
+
+/* Inner paragraph styling for readability */
+.innerPTag {
+  line-height: 20px;
+  opacity: 0.8;
+}
+
+/* Reduce line-height for name-status section */
+.name-status p {
+  line-height: 4px;
+}
+
+/* ===========================
+   Profile Icon Styling
+   =========================== */
+
+.name-icon {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icon and text */
+}
+
+/* Styling for profile images */
+.name-icon img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* ===========================
+   Box Shadow for Containers
+   =========================== */
+
+.all-container {
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.3); /* Stronger, more spread-out shadow */
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet and small screen adjustments */
+@media (min-width: 768px) {
+  .top-left-container,
+  .bottom-left-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-left-container .left,
+  .bottom-left-container .right {
+    max-width: 64%;
+  }
+
+  .top-left-container .right,
+  .bottom-left-container .left {
+    max-width: 33%;
+  }
+}
+
+/* Large screen (desktop) adjustments */
+@media (min-width: 1102px) {
+  /* Adjusting body layout */
+  body {
+    max-height: 100vh;
+    padding-top: 30px;
+    margin: 0;
+    gap: 0px;
+  }
+
+  /* Main container adapts to row layout */
+  .main-container {
+    max-width: 1100px;
+    flex-direction: row-reverse;
+    max-height: 600px;
+  }
+
+  /* Adjust right container width */
+  .right-container {
+    max-width: 23%;
+  }
+
+  /* Adjust left container width and alignment */
+  .left-container {
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  /* Remove extra margins */
+  .right-container,
+  .left,
+  .right {
+    margin-top: 0;
+  }
+
+  /* Reduce padding for smaller screens */
+  .all-container {
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+}
+
+/* ===========================
+   Attribution Section
+   =========================== */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
